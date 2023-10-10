@@ -41,9 +41,21 @@ echo Select the branch you just pushed
 echo  Click on the "Create Pull Request" button
 open -a "Google Chrome" https://github.com/$repousername/$reponame
 
-echo "Do you want to merge with the main branch the pull request? (yes/no)"
+echo "Do you want to merge with the main branch the pull request? (y/n)"
 read answer
-if [ "$answer" == "yes" ]
+if [ "$answer" == "y" ]
 then
-    ls -a
+    git checkout main
+    git merge new-proposed-feature
+    git push --set-upstream origin new-proposed-feature
 fi
+
+echo "Do you want to delete the branch? (y/n)"
+read answer
+if [ "$answer" == "y" ]
+then
+    git branch -d new-proposed-feature
+    # git push origin --delete lastupdate
+fi
+
+git branch
