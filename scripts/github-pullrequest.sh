@@ -55,7 +55,7 @@ read answer
 if [ "$answer" == "y" ]
 then
     git branch -d new-proposed-feature
-    # git push origin --delete lastupdate
+    # git push origin --delete new-proposed-feature
 fi
 
 git branch
