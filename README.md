@@ -6,3 +6,7 @@
 
 - [github-init.sh](scripts/github-init.sh): create README.md file, initialize git and commit
 - [github-pullrequest.sh](scripts/github-pullrequest.sh): create a request of the repository
+
+## To do
+
+[ ] Script and repo clone to autoinstall packages
