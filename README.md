@@ -22,3 +22,4 @@
 [ ] Calibre plugin
 [ ] Template of books fb2 guide with styles
 [ ] Template of books with _books for dummies_ style
+[ ] Bash script to evaluate chess positions
