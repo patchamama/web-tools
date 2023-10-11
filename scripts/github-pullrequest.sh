@@ -2,14 +2,13 @@ reponame=$(basename $(pwd))
 # Change your username here
 repousername=patchamama
 
-echo "Do you want to merge with the main branch the pull request? (y/n)"
-read answer
-if [ "$answer" == "y" ]
-then
-    open -a "Google Chrome" https://github.com/$repousername/$reponame
+collaboration=""
+if [ -f "collaboration.txt" ]; then
+    collaboration=$(head -n 1 collaboration.txt)
 fi
 
-exit
+echo $collaboration
+
 
 
 # Clone the repository
@@ -17,9 +16,15 @@ exit
 
 # Change to the repository directory
 #cd <repository_name>
-
-# Create a new branch
-git checkout -b new-proposed-feature
+newbranchname=""
+echo "Do you want to create the pull request in a new branch? (y/n)"
+read answer
+if [ "$answer" == "y" ]
+then
+    # Create a new branch
+    newbranchname="new-proposed-feature"
+    git checkout -b $newbranchname
+fi
 
 # Make changes to the files
 # ...
@@ -28,7 +33,7 @@ git checkout -b new-proposed-feature
 git add .
 
 # Commit the changes
-git commit -m "new proposed feature"
+git commit -m "new proposed feature $collaboration"
 
 # Push the branch to GitHub
 git push origin new-proposed-feature
@@ -50,12 +55,16 @@ then
     git push --set-upstream origin new-proposed-feature
 fi
 
-echo "Do you want to delete the branch? (y/n)"
-read answer
-if [ "$answer" == "y" ]
+if ! [ "$newbranchname" == "" ]
 then
-    git branch -d new-proposed-feature
-    # git push origin --delete new-proposed-feature
+    echo "Do you want to delete the branch? (y/n)"
+    read answer
+    if [ "$answer" == "y" ]
+    then
+        git branch -d new-proposed-feature
+        # git push origin --delete new-proposed-feature
+    fi
 fi
+
 
 git branch
