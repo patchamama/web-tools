@@ -83,8 +83,8 @@ then
         # git push origin --delete new-proposed-feature
     fi
 else
-    # git push
-    git push origin main
+    git push
+    # git push origin main
 fi
 
 git branch
