@@ -2,11 +2,11 @@ reponame=$(basename $(pwd))
 # Change your username here
 repousername=patchamama
 
-if [ $1 ]
+if [ $1 == "" ]
 then
-    comment=$1
+    comment="new proposed feature"    
 else
-    comment="new proposed feature"
+    comment=$1
 fi
 
 collaboration=""
