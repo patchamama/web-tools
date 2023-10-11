@@ -2,6 +2,13 @@ reponame=$(basename $(pwd))
 # Change your username here
 repousername=patchamama
 
+if [ $1 ]
+then
+    comment=$1
+else
+    comment="new proposed feature"
+fi
+
 collaboration=""
 if [ -f "collaboration.txt" ]; then
     collaboration=$(head -n 1 collaboration.txt)
@@ -50,7 +57,7 @@ fi
 git add .
 
 # Commit the changes
-git commit -m "new proposed feature $collaboration"
+git commit -m "$comment $collaboration"
 
 if ! [ "$newbranchname" == "" ]
 then
