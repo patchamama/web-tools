@@ -2,9 +2,9 @@ reponame=$(basename $(pwd))
 # Change your username here
 repousername=patchamama
 
-echo Initializing repo: $repo...
+echo Initializing repo: $reponame...
 
-echo "# $repo" >> README.md
+echo "# $reponame" >> README.md
 echo "" >> README.md
 echo "## Description" >> README.md
 echo "" >> README.md
