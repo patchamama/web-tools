@@ -9,8 +9,6 @@ fi
 
 echo $collaboration
 
-
-
 # Clone the repository
 #git clone <repository_url>
 
@@ -65,6 +63,5 @@ then
         # git push origin --delete new-proposed-feature
     fi
 fi
-
 
 git branch
