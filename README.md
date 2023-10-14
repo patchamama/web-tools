@@ -11,6 +11,12 @@
 - [github-open.sh](bash/github-open.sh): open the repo of github in the browser
 - [github-code.sh](bash/github-code.sh): open the code (vscode) in the github repo
 
+## Web Tools
+
+### Others
+
+- [Github Stats](https://patchamama.github.io/web-tools/others/github-stats.html)
+
 ## To do
 
 - Script and repo clone to autoinstall packages
