@@ -1,22 +1,46 @@
+<!-- FILEPATH: /Users/mandy/Documents/_Proyectos/web-tools/docs/index.html -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- Agregamos el enlace al archivo CSS de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.json" />
-    <title>React App</title>
-    <script defer="defer" src="./static/js/main.98461691.js"></script>
-    <link href="./static/css/main.073c9b0a.css" rel="stylesheet" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <!-- Creamos la lista de contenidos usando Bootstrap -->
+    <div class="container">
+      <h2>Índice</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><a href="#seccion1">Sección 1</a></li>
+        <li class="list-group-item"><a href="#seccion2">Sección 2</a></li>
+        <li class="list-group-item"><a href="#seccion3">Sección 3</a></li>
+      </ul>
+    </div>
+
+    <!-- Agregamos las secciones de contenido -->
+    <div class="container">
+      <h2 id="seccion1">Sección 1</h2>
+      <p>Contenido de la sección 1</p>
+    </div>
+
+    <div class="container">
+      <h2 id="seccion2">Sección 2</h2>
+      <p>Contenido de la sección 2</p>
+    </div>
+
+    <div class="container">
+      <h2 id="seccion3">Sección 3</h2>
+      <p>Contenido de la sección 3</p>
+    </div>
+
+    <!-- Agregamos los scripts de Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
