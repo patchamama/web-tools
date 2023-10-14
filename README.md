@@ -1,5 +1,7 @@
 # Web-tools and scripts
 
+# Deploy is here: https://patchamama.github.io/web-tools/
+
 ## Description
 
 ## Bash scrips
