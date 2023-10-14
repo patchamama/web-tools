@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../css/github-styles1.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/github-information.js"></script>
+    <title>Github Stats</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="row bg-color-contact">
+        <div class="col-lg-8">
+          <h3 class="contact-heading uppercase text-center">
+            View My GitHub Projects
+          </h3>
+          <h5 class="uppercase text-center">
+            You can also search on other user profiles
+          </h5>
+
+          <div class="center-form">
+            <input
+              type="text"
+              id="gh-username"
+              value="patchamama"
+              oninput="fetchGitHubInformation()"
+            />
+            <p>
+                <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="midudev">midudev</a> 
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="patchamama">patchamama</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="jgarciaolmedo">jgarciaolmedo</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="Klerith">Klerith</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="gndx">gndx</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="jonalvarezz">jonalvarezz</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="migueldeicaza">migueldeicaza</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="TheRealOwenRees">TheRealOwenRees</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="probonogo">probonogo</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="jglovier">jglovier</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="albecabrera">Albe</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="EdNekebno">EdNekebno</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="marcode24">marcode24</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="fsanchezbz">fsanchezbz</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="carloluis">carloluis</a>
+                | <a href="#" onclick="document.getElementById('gh-username').value = this.text; fetchGitHubInformation()" value="stefichjo">stefichjo</a>
+
+                
+            </p>
+          </div>
+            <div id="gh-user-data"></div>
+            <div class="center-form" id="gh-stats"></div>
+        </div>
+        <div class="col-lg-4">
+            <div id="gh-repo-data"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-color-contact">
+       
+    </section>
+  </body>
+</html>
