@@ -36,9 +36,28 @@ function repoInformationHTML(repos) {
             </div>`
 }
 
+repoFollowersHTML = (followers) => {
+  if (followers.length == 0) {
+    return `<div class="clearfix repo-list">No followers!</div>`
+  }
+  var listItemsHTML = followers.map(function (follower) {
+    return `<a href="#" onclick="$('#gh-username').val('${follower.login}');fetchGitHubInformation()" url="${follower.html_url}">${follower.login}</a> | `
+  })
+  //   document.getElementById('gh-username').value = this.text; fetchGitHubInformation()
+  return `<div class="clearfix repo-list">
+                <p>
+                    <strong>Followers:</strong>
+                </p>
+                
+                    ${listItemsHTML.join('\n')}
+                
+            </div>`
+}
+
 function fetchGitHubInformation(event) {
   $('#gh-user-data').html('')
   $('#gh-repo-data').html('')
+  $('#gh-followers').html('')
 
   var username = $('#gh-username').val()
   if (!username) {
@@ -57,13 +76,16 @@ function fetchGitHubInformation(event) {
 
   $.when(
     $.getJSON(`https://api.github.com/users/${username}`),
-    $.getJSON(`https://api.github.com/users/${username}/repos`)
+    $.getJSON(`https://api.github.com/users/${username}/repos`),
+    $.getJSON(`https://api.github.com/users/${username}/following`)
   ).then(
-    function (firstResponse, secondResponse) {
+    function (firstResponse, secondResponse, thirdResponse) {
       var userData = firstResponse[0]
       var repoData = secondResponse[0]
+      var repoFollowers = thirdResponse[0]
       $('#gh-user-data').html(userInformationHTML(userData))
       $('#gh-repo-data').html(repoInformationHTML(repoData))
+      $('#gh-followers').html(repoFollowersHTML(repoFollowers))
     },
     function (errorResponse) {
       if (errorResponse.status === 404) {
