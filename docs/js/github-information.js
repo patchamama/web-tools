@@ -67,6 +67,7 @@ function fetchGitHubInformation(event) {
 
   $('#gh-stats').html(`
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=${username}&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage"/>
+    <br />
     <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&custom_title=Github Most Used Languages" />`)
   $('#gh-user-data').html(
     `<div id="loader">
